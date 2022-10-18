@@ -3,6 +3,7 @@ package com.example.myfirstspring;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationContext;
 
+import com.example.mybeans.Book;
 import com.example.mybeans.Person;
 
 //@SpringBootApplication
@@ -20,6 +21,9 @@ public class MyFirstSpringApplication {
 
 		Person person = context.getBean("getPerson", Person.class);
 		System.out.println(person);
+
+		Book book = context.getBean("getBook", Book.class);
+		System.out.println(book);
 	}
 
 	/*

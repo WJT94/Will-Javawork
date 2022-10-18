@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch DatabaseConnectionExampleApplication",
+            "request": "launch",
+            "mainClass": "com.qa.databaseconnectionexample.DatabaseConnectionExampleApplication",
+            "projectName": "dependencyexample"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ConfigurationExampleApplication<configurationexample>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.qa.configurationexample.ConfigurationExampleApplication",
+            "projectName": "configurationexample",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
