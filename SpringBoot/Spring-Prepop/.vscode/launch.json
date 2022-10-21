@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-PrePopulatingDbsApplication<pre-populating_dbs>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.qa.demo.PrePopulatingDbsApplication",
+            "projectName": "pre-populating_dbs",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
