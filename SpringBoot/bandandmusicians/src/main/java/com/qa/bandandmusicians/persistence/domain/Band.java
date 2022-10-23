@@ -3,6 +3,7 @@ package com.qa.bandandmusicians.persistence.domain;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -19,6 +20,7 @@ public class Band {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column
     private String name;
 
     @OneToMany(mappedBy = "band", fetch = FetchType.EAGER)
@@ -51,5 +53,4 @@ public class Band {
     public Band() {
     }
 
-    
 }
