@@ -3,9 +3,12 @@ package com.qa.bandandmusicians.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import com.qa.bandandmusicians.persistence.domain.Band;
 import com.qa.bandandmusicians.persistence.repository.BandRepository;
 
+@Service
 public class BandService {
     BandRepository bandRepo;
 
