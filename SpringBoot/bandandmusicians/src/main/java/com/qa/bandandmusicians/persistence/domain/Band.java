@@ -18,20 +18,39 @@ import org.hibernate.annotations.OnDeleteAction;
 public class Band {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     @Column
     private String name;
 
     @OneToMany(mappedBy = "band", fetch = FetchType.EAGER)
     @OnDelete(action = OnDeleteAction.CASCADE)
-    private List<Musician> musicians = new ArrayList<>();
+    private List<Musician> musicians;
 
-    public Long getId() {
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Band other = (Band) obj;
+        if (id != other.id)
+            return false;
+        if (name == null) {
+            if (other.name != null)
+                return false;
+        } else if (!name.equals(other.name))
+            return false;
+        return true;
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -43,14 +62,24 @@ public class Band {
         this.name = name;
     }
 
-    public Band(Long id, String name, List<Musician> musicians) {
+    public Band() {
+        super();
+    }
+
+    public Band(int id, String name, List<Musician> musicians) {
         super();
         this.id = id;
         this.name = name;
-        this.musicians = musicians;
+        if (musicians != null) {
+            this.musicians = musicians;
+        } else {
+            this.musicians = new ArrayList<Musician>();
+        }
     }
 
-    public Band() {
+    public void addToBand(Musician musician) {
+        this.musicians.add(musician);
+        musician.setBand(this);
     }
 
 }

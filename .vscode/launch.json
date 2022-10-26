@@ -16,6 +16,16 @@
             "projectName": "configurationexample",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ConfigurationExampleApplication<configurationexample>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.qa.ConfigurationExampleApplication",
+            "projectName": "configurationexample",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }

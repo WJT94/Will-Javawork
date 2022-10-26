@@ -14,7 +14,7 @@ import javax.validation.constraints.Size;
 public class Musician {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @NotNull
     @Size(min = 0, max = 55)
@@ -30,11 +30,11 @@ public class Musician {
     @ManyToOne
     private Band band;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -70,19 +70,18 @@ public class Musician {
         this.band = band;
     }
 
-    public Musician(Long id, @NotNull @Size(min = 0, max = 55) String name, @Min(0) @Max(12) Integer strings,
+    public Musician(Integer id, @NotNull @Size(min = 0, max = 55) String name, @Min(0) @Max(12) Integer strings,
             @NotNull String type, Band band) {
         super();
         this.id = id;
         this.name = name;
         this.strings = strings;
         this.type = type;
-        this.band = band;
+        if (band != null)
+            this.band = band;
     }
 
     public Musician() {
         super();
     }
-
-    
 }

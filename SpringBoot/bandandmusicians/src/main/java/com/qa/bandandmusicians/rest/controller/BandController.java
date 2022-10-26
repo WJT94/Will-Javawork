@@ -32,7 +32,7 @@ public class BandController {
 		return ResponseEntity.ok(this.service.readAll());
 	}
 
-	@GetMapping("/band/readOne/{id}")
+	@GetMapping("/band/read/{id}")
 	public ResponseEntity<Optional<Band>> readId(@PathVariable Integer id) {
 		return ResponseEntity.ok(this.service.readOne(id));
 	}

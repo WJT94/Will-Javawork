@@ -2,31 +2,31 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Spring Boot-JpaRestfulAppApplication<JPA-RestfulApp>",
+            "name": "Spring Boot-AmazonAppApplication<amazonapp>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
-            "mainClass": "com.example.JpaRestfulAppApplication",
-            "projectName": "JPA-RestfulApp",
+            "mainClass": "com.example.amazonapp.AmazonAppApplication",
+            "projectName": "amazonapp",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         },
         {
             "type": "java",
-            "name": "Spring Boot-BandAndMusiciansApplication<bandandmusicians>",
+            "name": "Spring Boot-AmazonAppApplication<amazonapp>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
-            "mainClass": "com.qa.bandandmusicians.BandAndMusiciansApplication",
-            "projectName": "bandandmusicians",
+            "mainClass": "com.example.AmazonAppApplication",
+            "projectName": "amazonapp",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         },
         {
             "type": "java",
-            "name": "Spring Boot-PrePopulatingDbsApplication<pre-populating_dbs>",
+            "name": "Spring Boot-NewamazonappApplication<newamazonapp>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
-            "mainClass": "com.qa.demo.PrePopulatingDbsApplication",
-            "projectName": "pre-populating_dbs",
+            "mainClass": "com.example.NewamazonappApplication",
+            "projectName": "newamazonapp",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }

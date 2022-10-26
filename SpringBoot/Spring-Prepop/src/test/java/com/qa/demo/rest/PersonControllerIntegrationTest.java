@@ -46,14 +46,16 @@ public class PersonControllerIntegrationTest {
 	@Test
 	public void testCreate() throws JsonProcessingException, Exception {
 		String resultString = this.mockMVC
-			.perform(post("/person/create") // POST request for a person
+			.perform(
+				post("/person/create") // POST request for a person
 				.contentType(MediaType.APPLICATION_JSON) // set content type to JSON
-				.content(this.mapper.writeValueAsString(TEST_PERSON))) // set the content values as TEST_PERSON mapped to JSON
+				.content(this.mapper.writeValueAsString(TEST_PERSON)) // set the content values as TEST_PERSON mapped to JSON
+			) 
 			.andExpect(status().isCreated()) // Expect a 201 (Created) HTTP request.
 			.andReturn().getRequest().getContentAsString(); // Get what returned from the request as a string.
 
 		Person result = this.mapper.readValue(resultString, Person.class); // result = map the resultString into a Person object.
-		assertThat(result).isEqualTo(TEST_PERSON); // Assert that the result is equal to the values of TEST_PERSON.
+		assertThat(result).isEqualTo(TEST_SAVED_PERSON); // Assert that the result is equal to the values of TEST_PERSON.
 	}
 
 	@Test

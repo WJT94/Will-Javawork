@@ -1,13 +1,13 @@
-package com.qa.configurationexample;
+package com.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ConfigurationExampleApplication {
+public class NewamazonappApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ConfigurationExampleApplication.class, args);
+		SpringApplication.run(NewamazonappApplication.class, args);
 	}
 
 }
